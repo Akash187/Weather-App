@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Akash187/Weather-App/issues"
   },
-  "homepage": "https://github.com/Akash187/Weather-App#readme"
+  "homepage": "https://github.com/Akash187/Weather-App#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
 }
