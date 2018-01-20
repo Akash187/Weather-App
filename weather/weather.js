@@ -1,6 +1,7 @@
 const request = require('request');
 
-const key = '20304c4f86cd1b78d50d2817ebc867c7';
+const fs = require('fs');
+const key = fs.readFileSync('weatherKey.txt');
 
 let getWeather = (latitude, longitude, callback) => {
 

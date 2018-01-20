@@ -1,12 +1,14 @@
 const axios = require('axios');
 const yargs = require('yargs');
+const fs = require('fs');
 
-const geocodeKey = 'AIzaSyBxU9MTrAHV1ivTuOQA_yaoH779S2lN2QI';
-const weatherKey = '20304c4f86cd1b78d50d2817ebc867c7';
+const geocodeKey = fs.readFileSync('geocodeKey.txt');
+const weatherKey = fs.readFileSync('weatherKey.txt');
 
 const argv = yargs
     .options({
         a: {
+            default: "Durgakund Vranasi",
             demand: true,
             alias: 'address',
             describe: 'Address to fetch weather for',

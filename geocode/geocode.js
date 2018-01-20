@@ -1,6 +1,8 @@
 const request = require('request');
 
-const key = 'AIzaSyBxU9MTrAHV1ivTuOQA_yaoH779S2lN2QI';
+const fs = require('fs');
+
+const key = fs.readFileSync('geocodeKey.txt');
 
 const geocodeAddress = (address, callback) =>
 {
