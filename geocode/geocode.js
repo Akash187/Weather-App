@@ -2,7 +2,7 @@ const request = require('request');
 
 const fs = require('fs');
 
-const key = fs.readFileSync('geocodeKey.txt');
+const key = JSON.parse(fs.readFileSync('keys.json')).geocodeKey;
 
 const geocodeAddress = (address, callback) =>
 {

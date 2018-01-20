@@ -2,8 +2,8 @@ const axios = require('axios');
 const yargs = require('yargs');
 const fs = require('fs');
 
-const geocodeKey = fs.readFileSync('geocodeKey.txt');
-const weatherKey = fs.readFileSync('weatherKey.txt');
+const geocodeKey = JSON.parse(fs.readFileSync('keys.json')).geocodeKey;
+const weatherKey = JSON.parse(fs.readFileSync('keys.json')).weatherKey;
 
 const argv = yargs
     .options({

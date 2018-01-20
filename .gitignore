@@ -1,5 +1,4 @@
 .idea
 node_modules
 playground
-geocodeKey.txt
-weatherKey.txt
+keys.json
