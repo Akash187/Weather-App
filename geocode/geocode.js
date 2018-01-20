@@ -9,7 +9,7 @@ const geocodeAddress = (address, callback) =>
         url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${key}`,
         json: true
     }, (error, response, body) => {
-        callback(`StatusCode: ${response && response.statusCode}`);
+        callback(`GeoCode StatusCode: ${response && response.statusCode}`);
         if (error) {
             callback("Unable to connect to google servers.");
         } else if (body.status === "ZERO_RESULTS") {
